@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>if的嵌套</title>
+    <script>
+        function clc(){
+            var x=document.getElementById("age").value;
+
+            if(x==""){
+                alert("年龄不能为空")
+                return false;
+            }else{
+
+               if(isNaN(x)==false){
+                   alert("您的年龄是：\n"+x);
+               }else{
+                   alert("请输入数字")
+               }
+            }
+
+
+            if(x==""){
+                alert("分数不能为空")
+            }else if(x>90){
+                alert("分数在90分上")
+            }else if(x>80){
+                alert("分数在80分上")
+            }else if(x>60){
+                alert("合格了")
+            }else{
+                alert("不及格")
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="age" /><input type="button"  value="判断年龄" id="but" onclick="clc()"/>
+</body>
+</html>

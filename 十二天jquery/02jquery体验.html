@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        window.onload=function()
+        {
+            var i=0;
+            var timer=null;//声明变量‘i’赋值为0，声明‘timer’赋值为空。
+            function auto()//声明一个函数auto；
+            {
+                i++;//给变量i一个递增效果；
+                alert(i);
+            }
+            document.getElementsByTagName('button')[0].onclick=function()//调取第一个button元素，加一个点击事件。
+            {
+                timer=setInterval(auto,1000);//给变量timer附一个计时器，每一秒执行一次函数auto。
+            }
+            document.getElementsByTagName('button')[1].onclick=function()
+            {
+                clearInterval(timer);
+            }
+        }
+    </script>
+</head>
+<body>
+<button>开始计时</button>
+<button>取消计时</button>
+</body>
+</html>

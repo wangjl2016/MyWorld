@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script>
+       /* window.onload=function()
+        {
+            var btn=document.getElementsByTagName('button')[0];
+            btn.onclick=function()
+            {
+                alert(box.innerHTML);
+            };
+            var btn1=document.getElementsByTagName('button')[1];
+            btn1.onclick=function()
+            {
+                alert(box.innerHTML='这是修改后的内容');
+            }
+        }*/
+        $(function(){
+            var box=$('#box');
+           $('#one').click(function(){
+               alert(box.html())
+           });
+            $('#two').click(function(){
+                box.html('<h3>修改后<h3>')
+            });
+
+        })
+    </script>
+</head>
+<body>
+    <button id="one">显示内容</button>
+    <button id="two">修改内容</button>
+    <div id="box">这是个盒子</div>
+</body>
+</html>

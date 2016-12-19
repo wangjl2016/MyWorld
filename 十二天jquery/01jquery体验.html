@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        //setInterval("alert('每两秒执行一次')",2000);
+        //setTimeout("alert('两秒后只执行一次')",2000);
+        window.onload=function()
+        {   var timer=null;//声明一个计时器
+            var btn=document.getElementsByTagName('button')[0];//声明变量‘btn’，取第一个button。
+            btn.onclick=function()//给第一个button加入事件，并附函数
+            {
+               timer=setInterval("alert('haha')",1000);//给这个事件加一个响应，点击按钮后每一秒弹出一次‘haha’。
+            };
+            var btn1=document.getElementsByTagName('button')[1];
+            btn1.onclick=function()
+            {
+                clearInterval(timer);//清楚上面的周期。
+            }
+        }
+    </script>
+</head>
+<body>
+   <button class="btn">执行</button>
+   <button class="btn">取消执行</button>
+</body>
+</html>

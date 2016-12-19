@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css"/>
+    <script>
+        function show(className,mode){
+            document.getElementById(className).style.display='mode';
+        }
+    </script>
+</head>
+<body>
+
+<ul class="nav">
+    <li  onmouseover="show('list1','block')" onmouseout="low('list1','none')"><a href="">第一</a>
+        <ul id="list1">
+            <li>第一</li>
+            <li>第一</li>
+            <li>第一</li>
+        </ul>
+    </li>
+    <li  onmouseover="show('list2')" onmouseout="low('list2')"><a href="">第二</a>
+        <ul id="list2">
+            <li>第二</li>
+            <li>第二</li>
+            <li>第二</li>
+        </ul>
+    </li>
+    <li  onmouseover="show('list3')" onmouseout="low('list3')"><a href="">第三</a>
+        <ul id="list3">
+            <li>第三</li>
+            <li>第三</li>
+            <li>第三</li>
+        </ul>
+    </li>
+</ul>
+</body>
+</html>

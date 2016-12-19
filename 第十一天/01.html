@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>生成元素</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: #cccccc;
+            float: left;
+            margin-right: 10px;}
+    </style>
+    <script>
+        function cd(){
+            var div=document.createElement('div');
+            document.body.appendChild(div);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="cd()">点击我</button>
+</body>
+</html>

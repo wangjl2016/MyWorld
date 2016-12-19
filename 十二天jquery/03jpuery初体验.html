@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;}
+        #down{
+            display: none;}
+    </style>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script>
+        $(function()
+         {
+            $('button').click(function(){
+                $("#down").slideToggle();
+            })
+         }
+        )
+    </script>
+</head>
+<body>
+    <div id="top"><button>点击显示下面的div</button></div>
+    <div id="down">下面的div</div>
+</body>
+</html>
