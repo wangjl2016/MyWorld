@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>选择器</title>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script>
+       $(function(){
+          // $("#box~ul").css('background-color','red');
+           //$('#box').nextAll('ul').css('background-color','blue');
+           $('#box').siblings('ul').css('background-color','red');
+       })
+
+    </script>
+</head>
+<body>
+<div>
+    <ul>
+        <li>第一列</li>
+        <li>第二列</li>
+        <li>第三列</li>
+
+    </ul>
+</div>
+
+<ul>
+    <li>111</li>
+    <li>111</li>
+    <li>111</li>
+
+</ul>
+<div id="dv">
+    <ul>
+        <li>2222</li>
+        <li>2222</li>
+        <li>2222</li>
+
+    </ul>
+    <ul id="box">
+        <li>333</li>
+        <li>333</li>
+        <li>333</li>
+
+    </ul>
+    <ul>
+        <li>444</li>
+        <li>444</li>
+        <li>444</li>
+
+    </ul>
+    <ul>
+    <li>555</li>
+    <li>555</li>
+    <li>555</li>
+
+</ul>
+
+
+</div>
+
+
+<h1>这是h1</h1>
+
+<h2>这是h2</h2>
+
+
+</body>
+</html>

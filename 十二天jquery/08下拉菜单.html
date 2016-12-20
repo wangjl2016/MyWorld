@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>下拉菜单</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;}
+        body{font:12px/1.5 "宋体";}
+        li{list-style: none;}
+        #box{
+            width: 300px;
+            height: 30px;
+            margin: 100px auto 10px; }
+        #box li{
+            width: 100px;
+            height: 30px;
+            float: left;
+            background-color: #cccccc;
+            line-height: 30px;
+            text-align: center;
+            position: relative;
+           }
+        #box li ul{
+            display: none;
+            position: absolute;
+            top: 30px;
+            left: 0;
+
+            }
+        div{
+            width: 300px;
+            height: 100px;
+            background-color: yellow;
+            margin: 0 auto;}
+    </style>
+    <script src="jquery-1.7.2.min.js"></script>
+    <script>
+        $(function(){
+           $("#box li:has('ul')").mouseover(function(){
+               $(this).children('ul').show();
+           }).mouseout(function(){
+                $(this).children('ul').hide();
+            })
+
+        })
+    </script>
+</head>
+<body>
+<ul id="box">
+    <li>
+        <a href="">网页设计</a>
+        <ul>
+
+            <li>网页设计</li>
+            <li>网页设计</li>
+            <li>网页设计</li>
+        </ul>
+    </li>
+    <li>
+        <a href="">平面设计</a>
+        <ul>
+            <li>平面设计</li>
+            <li>平面设计</li>
+            <li>平面设计</li>
+        </ul>
+    </li>
+    <li>
+        <a href="">web开发</a>
+        <ul>
+            <li>web开发</li>
+            <li>web开发</li>
+            <li>web开发</li>
+        </ul>
+    </li>
+</ul>
+<div><p>我是我是我是我是我是我是我是我是我是我是我是我是我是我是我是我是我是我是我是我是我是我是我是我是我是</p></div>
+</body>
+</html>

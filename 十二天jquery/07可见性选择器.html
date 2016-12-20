@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: #cccccc;
+            float: left;
+            margin-right: 10px;}
+        .nav{
+            display: none;}
+        button{clear:both;}
+    </style>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script>
+        $(function(){
+            $('button:eq(0)').click(function(){
+                $("div:hidden").show();
+            });
+            $('button:eq(1)').click(function(){
+                $("div:visible").hide();
+            })
+        })
+    </script>
+</head>
+<body>
+    <p><button>显示div</button>
+    <button>隐藏div</button></p>
+    <div class="nav">隐藏的1</div>
+    <div>2</div>
+    <div class="nav">隐藏的3</div>
+    <div>4</div>
+    <div class="nav">隐藏的5</div>
+
+</body>
+</html>
