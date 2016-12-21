@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>样式的操作</title>
+    <style>
+        #nav li{
+            width: 100px;}
+        #nav li ul{
+            display: none;}
+       #nav li ul.show{                /* 添加一个空类，以便给jquery事件赋值。*/
+            display: block;}
+    </style>
+    <script src="jquery-1.7.2.min.js"></script>
+    <script>
+        $(function(){//加载。。。
+//            var list=$("#nav li:has('ul')");   //声明一个变量list，取要操作的 li元素。
+//            list.mouseover(function(){    //给li元素绑定一个事件。
+//                $(this).children("ul").addClass("show")    //给li自己里的子元素ul，添加一个类。
+//            })
+//            list.mouseout(function(){
+//                $(this).children("ul").removeClass("show")
+//            })
+            $("#nav li:has('ul')").hover(function(){
+                $(this).children('ul').toggleClass("show")
+            })
+        })
+
+
+    </script>
+
+</head>
+<body>
+<ul id="nav">
+    <li>11111
+        <ul>
+            <li>11111</li>
+            <li>1111</li>
+            <li>1111</li>
+        </ul>
+    </li>
+    <li>22222
+        <ul>
+            <li>2222</li>
+            <li>2222</li>
+            <li>2222</li>
+        </ul>
+    </li>
+    <li>
+        3333333333
+    </li>
+</ul>
+</body>
+</html>

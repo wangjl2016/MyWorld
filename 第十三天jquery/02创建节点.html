@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>创建节点</title>
+    <script src="jquery-1.7.2.min.js"></script>
+    <script>
+        $(function(){
+
+//            $("input:eq(1)").click(function(){
+//                var ipt=$("#content").val();
+//                //$("ul").append($("<li>"+ipt+"</li>"))
+//                if(ipt==""){
+//                    alert("请输入内容");
+//
+//                }else{
+//                   // $("ul").append($("<li>"+ipt+"</li>"))
+//                    $("ul").prepend($("<li>"+ipt+"</li>"))
+//                }
+//            })
+            $("button").click(function(){
+                $(this).clone(true).appendTo("body");
+            })
+        })
+    </script>
+</head>
+<body>
+<input type="text" id="content"/>
+<input type="button" value="提交"/>
+<button>克隆内容和事件</button>
+<ul>
+    <li>评论内容：</li>
+</ul>
+
+</body>
+</html>

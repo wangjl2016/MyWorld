@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>淘宝</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;}
+        li{
+            list-style: none;}
+        body{font:12px/1.5 "宋体";}
+        #box{
+            width: 600px;
+            border: 1px solid #cccccc;
+            margin: 100px auto;background-color: #d8d8d8;}
+        li{
+            width: 200px;
+            height: 30px;line-height: 30px;
+            float: left;
+            text-align: center;}
+        p{
+            clear: both;
+            width: 200px;
+            height: 30px;
+            line-height: 30px;
+            margin: 10px auto;
+            border: 1px solid #cccccc;
+            text-align: center;}
+    </style>
+    <script src="jquery-1.7.2.min.js"></script>
+    <script>
+        $(function(){
+           var produck=$("ul li:gt(5):not(:last)");
+            produck.hide();
+           $("p").click(function(){
+               if(produck.is(":hidden")){
+                   produck.show();
+                   $("p").html('<img src="up.gif"/><a href="#">隐藏部分商品</a>')
+               }else
+               {
+                   produck.hide();
+                   $("p").html('<img src="down.gif"/><a href="#">显示所有商品</a>')
+
+               }
+           })
+
+        })
+    </script>
+</head>
+<body>
+<div id="box">
+    <ul>
+        <li>11111</li>
+        <li>22222</li>
+        <li>33333</li>
+        <li>44444</li>
+        <li>55555</li>
+        <li>66666</li>
+        <li>77777</li>
+        <li>88888</li>
+        <li>99999</li>
+        <li>00000</li>
+        <li>11</li>
+        <li>12</li>
+        <li>其他</li>
+    </ul>
+    <p><img src="down.gif"/><a href="#">显示所有商品</a></p>
+</div>
+</body>
+</html>

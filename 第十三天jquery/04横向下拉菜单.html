@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>横向菜单</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;}
+        li{
+            list-style: none;}
+        body{font:12px/1.5 "宋体";}
+        #nav{
+            margin: 20px auto 2px;
+            width: 330px;}
+        #nav li{width: 100px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background-color: #cccccc;
+            float: left;
+            margin-right: 10px;
+            }
+        #nav li div{overflow: hidden;
+            width: 330px;
+            display: none;
+            }
+        #nav li div ul li{
+            width: 100px;
+            float: left;background-color: yellow;}
+        #nav li div.show{
+            width: 330px;
+            display: block;}
+    </style>
+    <script src="jquery-1.7.2.min.js"></script>
+    <script>
+        $(function(){
+            $("#nav li:has('div')").hover(function(){
+                $(this).children('div').toggleClass("show");
+            })
+        })
+    </script>
+</head>
+<body>
+<ul id="nav">
+    <li><a href="#">网页设计</a>
+       <div>
+           <ul>
+            <li>网页设计</li>
+            <li>网页设计</li>
+            <li>网页设计</li>
+           </ul>
+       </div>
+    </li>
+    <li><a href="#">平面设计</a>
+        <div><ul>
+            <li>平面设计</li>
+            <li>平面设计</li>
+            <li>平面设计</li>
+        </ul></div>
+    </li>
+    <li><a href="#">UI设计</a>
+        <div><ul>
+            <li>UI设计</li>
+            <li>UI设计</li>
+            <li>UI设计</li>
+        </ul></div>
+    </li>
+</ul>
+<select name="1" id="one" multiple="multiple" >
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+</select>
+</body>
+</html>
