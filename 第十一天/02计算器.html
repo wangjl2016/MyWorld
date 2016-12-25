@@ -4,68 +4,69 @@
     <meta charset="UTF-8">
     <title>加法计算器</title>
     <style>
-        table{
+        table {
             margin: auto;
             border: 1px solid #000;
             height: 160px;
             width: 250px;
-            cellspadding:5px;
-            text-align: center;}
-        td{
-            border: 1px solid #000;}
+            cellspadding: 5px;
+            text-align: center;
+        }
+
+        td {
+            border: 1px solid #000;
+        }
     </style>
     <script>
-        function js(){
-           var x, y,z;
-           x= document.getElementById('nam1').value;
-            y=document.getElementById('nam2').value;
-          if (x==""){                                 //"=="为判断是否等于。x==5 意思是x是否等于5.
-              alert('请输入加数一！');
-              return false;                         //如果函数返回的结果为假，那么就退出函数，不执行。
-          }else{
-              if(isNaN(x)==true){
-                  alert('请输入数字！')
-                  return false;
-              }
-          }
+        function js() {
+            var x, y, z;
+            x = document.getElementById('nam1').value;
+            y = document.getElementById('nam2').value;
+            if (x == "") {                                 //"=="为判断是否等于。x==5 意思是x是否等于5.
+                alert('请输入加数一！');
+                return false;                         //如果函数返回的结果为假，那么就退出函数，不执行。
+            } else if (isNaN(x) == true) {
+                alert('请输入数字！')
+                return false;
+            }
 
-            if (y==""){                                 //"=="为判断是否等于。x==5 意思是x是否等于5.
+            if (y == "") {                                 //"=="为判断是否等于。x==5 意思是x是否等于5.
                 alert('请输入加数二！');
                 return false;                         //如果函数返回的结果为假，那么就退出函数，不执行。
-            }else{
-                if(isNaN(y)==true){
+            } else {
+                if (isNaN(y) == true) {
                     alert('请输入数字！')
                     return false;
                 }
             }
 
-            z=parseInt(x)+parseInt(y);
-          document.getElementById('reslut').value=z;
+            z = parseInt(x) + parseInt(y);
+            document.getElementById('reslut').value = z;
 
         }
     </script>
 </head>
 <body>
-    <table>
-        <tr>
-            <td colspan="2">计算器</td>
+<table>
+    <tr>
+        <td colspan="2">计算器</td>
 
-        </tr>
-        <tr>
-            <td>加数一</td>
-            <td><input type="text" id="nam1" /></td>
-        </tr>
-        <tr>
-            <td>加数二</td>
-            <td><input type="text" id="nam2"></td>
-        </tr>
-        <tr>
-            <td>结果</td>
-            <td><input type="text" id="result"></td>
-        </tr>
-        <tr>
-            <td colspan="2"><input type="button" value="计算" onclick="js()"></td>
-        </tr>
-    </table>
+    </tr>
+    <tr>
+        <td>加数一</td>
+        <td><input type="text" id="nam1"/></td>
+    </tr>
+    <tr>
+        <td>加数二</td>
+        <td><input type="text" id="nam2"></td>
+    </tr>
+    <tr>
+        <td>结果</td>
+        <td><input type="text" id="result"></td>
+    </tr>
+    <tr>
+        <td colspan="2"><input type="button" value="计算" onclick="js()"></td>
+    </tr>
+</table>
 </body>
 </html>

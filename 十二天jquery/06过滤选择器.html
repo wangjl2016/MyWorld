@@ -4,15 +4,51 @@
     <meta charset="UTF-8">
     <title>过滤选择器</title>
     <script src="jquery-3.1.1.min.js"></script>
+    <style>
+        span{
+            opacity:1;
+            /*display: none;*/
+        }
+    </style>
     <script>
         $(function(){
-  $('li:first').css('color','red');
-            $("#login:focus");
+//  $('li:first').css('color','red');
+//            $("#login:focus");
+           // $("li:gt(0):lt(3)").css("background","red")
+//            $("ul li span:first-child").css("background","red")
+//           // $("#wang").append($("<p>dfsdfsdfsd</p>"));
+//            $("<p>dfsdfsdfsd</p>").appendTo($("#wang"));
+////            alert($("input").val())
+//            $("input").val("che meihuan")
+//
+//            $("#no1").append($("<li>wangjinlon</li>"))
+            //$("span").replaceWith("<h1>wangjinlong</h1>>")
+            $("ul").each(function(){
+                if($(this).hasClass("no1")){
+                    $(this).children("li").css("color","red");
+//                alert($(this).children().css("color","red"))
+                }
+            })
+            $("#run").click(function(){
+                $("span").fadeTo("slow",0.5,function(){
+//                    alert("我出来了")
+                });
+            })
+
+
         })
     </script>
 </head>
 <body>
+<span>wangjinlong</span>
+<!--<input type="text" value="wangjinlong"/>-->
+<ul class="no1">
 
+    <li>111</li>
+    <li>222</li>
+    <li>333</li>
+    <li>444</li>
+</ul>
 <ul>
 
     <li>111</li>
@@ -20,6 +56,9 @@
     <li>333</li>
     <li>444</li>
 </ul>
+
+
+<div id="wang"></div>
 <button id="run">run</button><div></div>
 </body>
 </html>

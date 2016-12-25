@@ -7,14 +7,31 @@
         #nav li{
             width: 156px;
             height: 196px;}
+        #box{
+            margin: 0;
+            display: none;
+            position: absolute;}
+
     </style>
     <script src="jquery-1.7.2.min.js"></script>
     <script>
-        $(function(){
+            $(function(){
             $("ul li").each(function(){
-                $(this).mouseover(function(){
+                $(this).mouseover(function(e){
                     var pic=$(this).children('a').attr("href");
                     var box="<div id='box'><img src='"+pic+"'></div>";
+                    $("body").append(box);
+                    $("#box").css({
+                        top: e.pageY+10,
+                        left: e.pageX+10
+                    }).show();
+                }).mouseout(function(){
+                    $("#box").remove()
+                }).mousemove(function(e){
+                    $("#box").css({
+                        top: e.pageY+10,
+                        left: e.pageX+10
+                    })
                 })
             })
         })
